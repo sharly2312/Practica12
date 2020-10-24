@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Calculadora</h1>
+    @using (Html.BeginForm()){
+        <table>
+            <tr>
+                <th> AREA: </th>
+            <td> <input type="text" id="txtNumuero1" name="numero1" class="form-control" /></td>
+            </tr>
+            <tr>
+                <th>BASE: </th>
+            <td> <input type="text" id="txtNumuero2" name="numero2" class="form-control" /></td>
+            </tr>
+         
+            <tr>
+                <th ><input type="submit" name="tipo" value="Triangulo" class="btn btn-primary"/></th>
+                <th><input type="submit" name="tipo" value="Rectangulo" class="btn btn-primary" /></th> 
+            </tr>
+            <tr>
+                <th>Resultado</th>
+                <td><input type="text" class="form-control" value="@ViewBag.Resultado" /> </td>
+            </tr>
+
+        </table>
+    }
+</div>
